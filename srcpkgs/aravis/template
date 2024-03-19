@@ -1,6 +1,6 @@
 # Template file for 'aravis'
 pkgname=aravis
-version=0.8.29
+version=0.8.31
 revision=1
 build_style=meson
 configure_args="-Ddocumentation=enabled"
@@ -13,7 +13,7 @@ maintainer="Andrew J. Hesford <ajh@sideband.org>"
 license="LGPL-2.1-or-later"
 homepage="https://github.com/AravisProject/aravis"
 distfiles="${homepage}/archive/${version}.tar.gz"
-checksum=37d1d818c04b1261e433acd583fa4e022648be25f1cd04bc67251920ef3e39f6
+checksum=469332a5e718662cb15098894fd825bc6a23d76aaddd498e1dd4a9c2bc0fa6ae
 # Network test causes timeout in CI
 make_check=ci-skip
 
