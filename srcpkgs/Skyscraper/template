@@ -1,0 +1,25 @@
+# Template file for 'Skyscraper'
+pkgname=Skyscraper
+version=3.18.3
+revision=1
+build_style=qmake
+hostmakedepends="pkg-config qt6-tools"
+makedepends="qt6-base-devel"
+depends="qt6-sql"
+short_desc="Powerful and versatile game data scraper written in Qt and C++"
+maintainer="Numair Dubas <Numair2644@protonmail.com>"
+license="GPL-3.0-or-later"
+homepage="https://gemba.github.io/skyscraper"
+changelog="https://gemba.github.io/skyscraper/CHANGELOG"
+distfiles="https://github.com/Gemba/skyscraper/archive/refs/tags/${version}.tar.gz"
+checksum=173d9e97457caa9ed202ffa9a630c48ac357392398df5c9083a4926ae8b7cc76
+
+pre_configure() {
+	export PREFIX=/usr
+	export SYSCONFDIR=/etc
+}
+
+post_install() {
+	vdoc README.md
+	vcompletion supplementary/bash-completion/Skyscraper.bash bash
+}
